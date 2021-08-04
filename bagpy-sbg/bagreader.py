@@ -46,6 +46,7 @@ from geometry_msgs.msg  import Twist, Pose, PoseStamped
 from nav_msgs.msg import Path, Odometry
 from geometry_msgs.msg import Point, Twist
 from sensor_msgs.msg import LaserScan
+from sbg_genpy._SbgGpsPos import SbgGpsPos
 
 
 import numpy  as np
@@ -61,14 +62,14 @@ version_src = ''
 
 try:
     import importlib.resources as pkg_resources
-    with pkg_resources.path('bagpy', 'version') as rsrc:
+    with pkg_resources.path('bagpy-sbg', 'version') as rsrc:
         version_src = rsrc
 except ImportError:
     # Try backported to PY<37 `importlib_resources`.
     print("Python older than 3.7 detected. ")
     try:
         import importlib_resources as pkg_resources
-        with pkg_resources.path('bagpy', 'version') as rsrc:
+        with pkg_resources.path('bagpy-sbg', 'version') as rsrc:
             version_src = rsrc
     except ImportError:
         print("importlib_resources not found. Install backported importlib_resources through `pip install importlib-resources`")
@@ -105,7 +106,7 @@ def get_latest_bagpy_version():
     from subprocess import check_output, CalledProcessError
 
     try:  # needs to work offline as well
-        result = check_output(["yolk", "-V", "bagpy"])
+        result = check_output(["yolk", "-V", "bagpy-sbg"])
         return result.split()[1].decode("utf-8")
     except CalledProcessError:
         return "0.0.0"
@@ -119,12 +120,12 @@ def check_for_latest_version():
     if version.parse(__version__) < version.parse(latest_version):
         import warnings
         warnings.warn("{}\n{}\n{}\n{}\n{}\n{}".format(
-            "There is a newer version of bagpy available on PyPI:\n",
+            "There is a newer version of bagpy-sbg available on PyPI:\n",
             "Your version: \t",
             __version__,
             "Latest version: \t",
             latest_version,
-            "Consider updating it by using command pip install --upgrade bagpy"
+            "Consider updating it by using command pip install --upgrade bagpy-sbg"
         ))
 
 

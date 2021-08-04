@@ -82,12 +82,12 @@ source_suffix = [".rst", ".ipynb"]
 master_doc = "index"
 
 # General information about the project.
-project = "bagpy"
+project = "bagpy-sbg"
 author = "Rahul Bhadani"
-title = "bagpy: Reading rosbag files simplified"
+title = "bagpy-sbg: Reading rosbag files simplified"
 copyright = f"{datetime.now():%Y}, {author}"
 
-v = Path("../../bagpy/version").open(encoding = "utf-8").read().splitlines()
+v = Path("../../bagpy-sbg/version").open(encoding ="utf-8").read().splitlines()
 version = v[0].strip()
 
 # The full version, including alpha/beta/rc tags.
@@ -99,7 +99,7 @@ todo_include_todos = False
 
 # Add notebooks prolog to Google Colab and nbviewer
 nbsphinx_prolog = r"""
-{% set docname = 'github/jmscslgroup/bagpy/blob/master/notebook/' + env.doc2path(env.docname, base=None) %}
+{% set docname = 'github/jmscslgroup/bagpy-sbg/blob/master/notebook/' + env.doc2path(env.docname, base=None) %}
 .. raw:: html
 
     <div class="note">
@@ -114,8 +114,8 @@ nbsphinx_prolog = r"""
 
 html_theme = "sphinx_rtd_theme"
 html_theme_options = dict(navigation_depth=1, titles_only=True)
-github_repo = "bagpy"
-github_nb_repo = "bagpy"
+github_repo = "bagpy-sbg"
+github_nb_repo = "bagpy-sbg"
 html_static_path = ["_static"]
 
 html_logo = "favicon.png"

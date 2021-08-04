@@ -3,7 +3,7 @@ from distutils.dir_util import copy_tree
 from pathlib import Path
 import sys
 
-PACKAGE_NAME='bagpy'
+PACKAGE_NAME='bagpy-sbg'
 import shutil, os
 shutil.copy('README.md', PACKAGE_NAME + '/README.md')
 
@@ -50,14 +50,15 @@ elif '2.' in sys.version:
 
 
 setuptools.setup(
-    name='bagpy',
+    name='bagpy-sbg',
     version=v[0].strip(),
     author="Rahul Bhadani",
     author_email="rahulbhadani@email.arizona.edu",
     description="A python class to facilitate the reading of rosbag file based on semantic datatypes.",
     long_description=readme(),
     long_description_content_type="text/markdown",
-    url="https://github.com/jmscslgroup/bagpy",
+    #url="https://github.com/jmscslgroup/bagpy",
+    url = "https://github.com/sergiobellido/bagpy",
     packages=setuptools.find_packages(),
     install_requires=required_packages,
     classifiers=[
@@ -70,7 +71,7 @@ setuptools.setup(
         ],
     keywords='Autonomous vehicle, ACC, adaptive cruise control, ROS, Robotics',
     include_package_data=True,
-    package_data={'bagpy': ['README.md','version']},
+    package_data={'bagpy-sbg': ['README.md','version']},
     zip_safe=False
         )
-os.remove('bagpy/README.md')
+os.remove('bagpy-sbg/README.md')

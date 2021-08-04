@@ -55,7 +55,7 @@ def setup(app):
 
 # -- Project information -----------------------------------------------------
 
-project = 'bagpy: Reading rosbag files simplified'
+project = 'bagpy-sbg: Reading rosbag files simplified'
 copyright = '2020, Rahul Bhadani'
 author = 'Rahul Bhadani'
 
@@ -268,8 +268,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'bagpydoc', u'bagpy Documentation',
-     author, 'bagpy', 'One line description of project.',
+    (master_doc, 'bagpydoc', u'bagpy-sbg Documentation',
+     author, 'bagpy-sbg', 'One line description of project.',
      'Miscellaneous'),
 ]
 
