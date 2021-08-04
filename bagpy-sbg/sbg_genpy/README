@@ -1,0 +1,6 @@
+Folder to execute this command: /opt/ros/noetic/lib/genpy
+
+./genmsg_py.py -p sbg_driver -Istd_msgs:`rospack find std_msgs`/msg -Isbg_driver:`rospack find sbg_driver`/msg -Igeometry_msgs:`rospack find geometry_msgs`/msg -o '/home/sbellido/sbg_genpy' '/home/sbellido/agrolaser_ws/src/sbg_ros_driver/msg/SbgGpsPos.msg'
+
+
+Just need to change the output path '/home/sbellido/agrolaser_ws/src/sbg_ros_driver/msg/SbgGpsPos.msg' to process different msgs. 
