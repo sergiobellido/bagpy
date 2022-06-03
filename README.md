@@ -9,6 +9,7 @@
 [![Downloads](https://pepy.tech/badge/bagpy)](https://pepy.tech/project/bagpy)
 
 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/sergiobellido/bagpy/master?labpath=%2Fnotebook%2Fbagpy_example.ipynb)
 
 # bagpy
 __A Python package to facilitate the reading of a rosbag file based on semantic datatypes.__
